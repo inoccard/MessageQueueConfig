@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["RabbitMqServer/RabbitMqServer.csproj", "RabbitMqServer/"]
-RUN dotnet restore "RabbitMqServer/RabbitMqServer.csproj"
+COPY ["MessageQueueBasic.Web/MessageQueueBasic.Web.csproj", "MessageQueueBasic.Web/"]
+RUN dotnet restore "MessageQueueBasic.Web/MessageQueueBasic.Web.csproj"
 COPY . .
-WORKDIR "/src/RabbitMqServer"
-RUN dotnet build "RabbitMqServer.csproj" -c Release -o /app/build
+WORKDIR "/src/MessageQueueBasic.Web"
+RUN dotnet build "MessageQueueBasic.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "RabbitMqServer.csproj" -c Release -o /app/publish
+RUN dotnet publish "MessageQueueBasic.Web.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "RabbitMqServer.dll"]
+ENTRYPOINT ["dotnet", "MessageQueueBasic.Web.dll"]
