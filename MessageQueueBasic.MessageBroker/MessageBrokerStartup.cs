@@ -18,9 +18,9 @@ public static partial class MessageBrokerStartup
             a.SetKebabCaseEndpointNameFormatter();
 
             #region Consumers
-            a.AddConsumer<TestConsumer>(m => m.UseMessageRetry(r => r.Interval(3, TimeSpan.FromMilliseconds(3000))));
 
             // Add a single consumer
+            a.AddConsumer<TestConsumer>(m => m.UseMessageRetry(r => r.Interval(3, TimeSpan.FromMilliseconds(3000))));
 
             // Add a single consumer
             //a.AddConsumer<TestConsumer>(typeof(TestConsumerDefinition));
