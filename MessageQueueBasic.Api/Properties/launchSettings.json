@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "RabbitMqServer": {
+    "Selfhost": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
