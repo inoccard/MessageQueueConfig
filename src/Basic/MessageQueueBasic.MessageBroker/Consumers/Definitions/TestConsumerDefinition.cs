@@ -4,6 +4,7 @@ using MassTransit.ConsumeConfigurators;
 using MassTransit.Definition;
 
 namespace MessageQueueBasic.MessageBroker.Consumers.Definitions;
+
 public class TestConsumerDefinition : ConsumerDefinition<TestConsumer>
 {
     /// <summary>

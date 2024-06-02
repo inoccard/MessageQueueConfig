@@ -20,7 +20,12 @@ public static partial class MessageBrokerStartup
             #region Consumers
 
             // Add a single consumer
-            a.AddConsumer<TestConsumer>(m => m.UseMessageRetry(r => r.Interval(3, TimeSpan.FromMilliseconds(3000))));
+            a.AddConsumer<TestConsumer>(
+                m => m.UseMessageRetry(r =>
+                r.Interval(3, TimeSpan.FromMilliseconds(3000))
+            ));
+
+            #region outras formas de configruar consumidores
 
             // Add a single consumer
             //a.AddConsumer<TestConsumer>(typeof(TestConsumerDefinition));
@@ -34,6 +39,8 @@ public static partial class MessageBrokerStartup
             // Add all consumers in the namespace containing the specified type
             //a.AddConsumersFromNamespaceContaining<TestConsumer>();
 
+            #endregion outras formas de configruar consumidores
+
             #endregion Consumers
 
             a.UsingRabbitMq((context, cfg) =>
@@ -41,8 +48,8 @@ public static partial class MessageBrokerStartup
                 var config = configuration.GetSection("QueueSettings").Get<HostConfiguration>();
                 cfg.Host(config?.Host, config?.VirtualHost, h =>
                 {
-                    h.Username(config.UserName);
-                    h.Password(config.Password);
+                    h.Username(config?.UserName);
+                    h.Password(config?.Password);
                 });
 
                 cfg.ConfigureEndpoints(context);
