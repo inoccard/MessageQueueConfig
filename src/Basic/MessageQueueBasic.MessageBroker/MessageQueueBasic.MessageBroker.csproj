@@ -19,8 +19,4 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MessageQueueBasic.Domain\MessageQueueBasic.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

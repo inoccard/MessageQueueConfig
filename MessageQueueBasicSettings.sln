@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.Domain", "MessageQueueBasic.Domain\MessageQueueBasic.Domain.csproj", "{D491BAA8-B1F6-4EE7-B552-A965702903EC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.MessageBroker", "MessageQueueBasic.MessageBroker\MessageQueueBasic.MessageBroker.csproj", "{EC46B75E-6E46-4004-92DB-93B4E4DA3AF8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.Api", "MessageQueueBasic.Api\MessageQueueBasic.Api.csproj", "{9F8E83EB-8751-4D09-B225-E9EF1AC4F19A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiBus", "MultiBus", "{2494F111-680D-47E3-809F-33EB05F35082}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiBus.Api", "src\MultiBus\MultiBus.Api\MultiBus.Api.csproj", "{A9086752-06C6-43F9-85F7-96033620E9FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BultiBus.MessageQueue", "src\MultiBus\BultiBus.MessageQueue\BultiBus.MessageQueue.csproj", "{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{92E90966-283F-467A-A2B4-7C9CFA911BFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.MessageBroker", "src\Basic\MessageQueueBasic.MessageBroker\MessageQueueBasic.MessageBroker.csproj", "{EA19C783-7B32-4141-8AA5-B079DCAF979B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.Api", "src\Basic\MessageQueueBasic.Api\MessageQueueBasic.Api.csproj", "{5B6D7643-62C5-4D48-B133-96C152276387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D491BAA8-B1F6-4EE7-B552-A965702903EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D491BAA8-B1F6-4EE7-B552-A965702903EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D491BAA8-B1F6-4EE7-B552-A965702903EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D491BAA8-B1F6-4EE7-B552-A965702903EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC46B75E-6E46-4004-92DB-93B4E4DA3AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC46B75E-6E46-4004-92DB-93B4E4DA3AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC46B75E-6E46-4004-92DB-93B4E4DA3AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC46B75E-6E46-4004-92DB-93B4E4DA3AF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F8E83EB-8751-4D09-B225-E9EF1AC4F19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F8E83EB-8751-4D09-B225-E9EF1AC4F19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F8E83EB-8751-4D09-B225-E9EF1AC4F19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F8E83EB-8751-4D09-B225-E9EF1AC4F19A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A9086752-06C6-43F9-85F7-96033620E9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9086752-06C6-43F9-85F7-96033620E9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9086752-06C6-43F9-85F7-96033620E9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +29,14 @@ Global
 		{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA19C783-7B32-4141-8AA5-B079DCAF979B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA19C783-7B32-4141-8AA5-B079DCAF979B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA19C783-7B32-4141-8AA5-B079DCAF979B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA19C783-7B32-4141-8AA5-B079DCAF979B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6D7643-62C5-4D48-B133-96C152276387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6D7643-62C5-4D48-B133-96C152276387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6D7643-62C5-4D48-B133-96C152276387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6D7643-62C5-4D48-B133-96C152276387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A9086752-06C6-43F9-85F7-96033620E9FD} = {2494F111-680D-47E3-809F-33EB05F35082}
 		{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52} = {2494F111-680D-47E3-809F-33EB05F35082}
+		{EA19C783-7B32-4141-8AA5-B079DCAF979B} = {92E90966-283F-467A-A2B4-7C9CFA911BFB}
+		{5B6D7643-62C5-4D48-B133-96C152276387} = {92E90966-283F-467A-A2B4-7C9CFA911BFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29ABD2E0-93BD-4CF7-BAB3-15979BFFE9D2}
