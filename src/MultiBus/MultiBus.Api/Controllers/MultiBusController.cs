@@ -27,7 +27,7 @@ namespace MultiBus.Api.Controllers
 
             return Ok();
         }
-        
+
         [HttpPost("publish-second")]
         public async Task<ActionResult> PublishSecond()
         {

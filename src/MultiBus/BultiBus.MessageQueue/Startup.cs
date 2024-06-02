@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics.CodeAnalysis;
+﻿using BultiBus.MessageQueue.Bus;
+using BultiBus.MessageQueue.Consumers;
 using GreenPipes;
 using MassTransit;
-using BultiBus.MessageQueue.Consumers;
-using BultiBus.MessageQueue.Bus;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BultiBus.MessageQueue;
 
@@ -39,7 +39,7 @@ public static class Startup
                 cfg.ConfigureEndpoints(context);
             });
         });
-        
+
         services.AddMassTransit<ISecondBus>(a =>
         {
             a.SetKebabCaseEndpointNameFormatter();

@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics.CodeAnalysis;
-using GreenPipes;
+﻿using GreenPipes;
 using MassTransit;
 using MessageQueueBasic.MessageBroker.Consumers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MessageQueueBasic.MessageBroker;
 
