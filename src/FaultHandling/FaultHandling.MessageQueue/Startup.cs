@@ -29,7 +29,7 @@ public static class Startup
 
             a.UsingRabbitMq((context, cfg) =>
             {
-                var config = configuration.GetSection("FirstQueueSetting").Get<HostConfiguration>();
+                var config = configuration.GetSection("QueueSettings").Get<HostConfiguration>();
                 cfg.Host(config.Host, config.VirtualHost, h =>
                 {
                     h.Username(config.UserName);
