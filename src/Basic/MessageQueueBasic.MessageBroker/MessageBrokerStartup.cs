@@ -3,6 +3,7 @@ using MassTransit;
 using MessageQueueBasic.MessageBroker.Consumers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sds.MessageQueue.Core;
 using System.Diagnostics.CodeAnalysis;
 
 namespace MessageQueueBasic.MessageBroker;

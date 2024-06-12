@@ -1,5 +1,4 @@
-﻿using BultiBus.MessageQueue.Bus;
-using BultiBus.MessageQueue.Consumers;
+﻿using FaultHandling.MessageQueue.Consumers;
 using GreenPipes;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Sds.MessageQueue.Core;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BultiBus.MessageQueue;
+namespace FaultHandling.MessageQueue;
 
 [ExcludeFromCodeCoverage]
 public static class Startup
@@ -21,7 +20,7 @@ public static class Startup
             #region Consumers
 
             // Add a single consumer
-            a.AddConsumer<FirstConsumer>(
+            a.AddConsumer<FailureTestConsumer>(
                 m => m.UseMessageRetry(r =>
                 r.Interval(3, TimeSpan.FromMilliseconds(3000))
             ));
@@ -38,34 +37,6 @@ public static class Startup
                 });
 
                 cfg.ConfigureEndpoints(context);
-            });
-        });
-
-        services.AddMassTransit<ISecondBus>(a =>
-        {
-            a.SetKebabCaseEndpointNameFormatter();
-
-            #region Consumers
-
-            // Add a single consumer
-            a.AddConsumer<SecondConsumer>(
-                m => m.UseMessageRetry(r =>
-                r.Interval(3, TimeSpan.FromMilliseconds(3000))
-            ));
-
-            #endregion Consumers
-
-            a.UsingRabbitMq((context, cfg) =>
-            {
-                var config = configuration.GetSection("SecondQueueSetting").Get<HostConfiguration>();
-                cfg.Host(config.Host, config.VirtualHost, h =>
-                {
-                    h.Username(config.UserName);
-                    h.Password(config.Password);
-                });
-
-                cfg.ConfigureEndpoints(context);
-
             });
         });
     }

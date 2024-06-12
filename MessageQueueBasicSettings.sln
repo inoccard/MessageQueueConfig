@@ -5,15 +5,25 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiBus", "MultiBus", "{2494F111-680D-47E3-809F-33EB05F35082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiBus.Api", "src\MultiBus\MultiBus.Api\MultiBus.Api.csproj", "{A9086752-06C6-43F9-85F7-96033620E9FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiBus.Api", "src\MultiBus\MultiBus.Api\MultiBus.Api.csproj", "{A9086752-06C6-43F9-85F7-96033620E9FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BultiBus.MessageQueue", "src\MultiBus\BultiBus.MessageQueue\BultiBus.MessageQueue.csproj", "{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BultiBus.MessageQueue", "src\MultiBus\BultiBus.MessageQueue\BultiBus.MessageQueue.csproj", "{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{92E90966-283F-467A-A2B4-7C9CFA911BFB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.MessageBroker", "src\Basic\MessageQueueBasic.MessageBroker\MessageQueueBasic.MessageBroker.csproj", "{EA19C783-7B32-4141-8AA5-B079DCAF979B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueBasic.Api", "src\Basic\MessageQueueBasic.Api\MessageQueueBasic.Api.csproj", "{5B6D7643-62C5-4D48-B133-96C152276387}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FaultHandling", "FaultHandling", "{3E374B7E-3D07-46E1-AB75-27D415654FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultHandling.Api", "src\FaultHandling\FaultHandling.Api\FaultHandling.Api.csproj", "{C92FB897-3C7C-4404-81D3-BC750D00A4C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultHandling.MessageQueue", "src\FaultHandling\FaultHandling.MessageQueue\FaultHandling.MessageQueue.csproj", "{9B3A6AE9-D228-444F-9045-436CEDAE7A54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuldingBlocks", "BuldingBlocks", "{9706B1EE-35B0-45CB-9759-8418AD07D6B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sds.MessageQueue.Core", "src\Sds.MessageQueue.Core\Sds.MessageQueue.Core.csproj", "{0CE177D9-7F2E-47D3-B104-73177EE5CBDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +47,18 @@ Global
 		{5B6D7643-62C5-4D48-B133-96C152276387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6D7643-62C5-4D48-B133-96C152276387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B6D7643-62C5-4D48-B133-96C152276387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92FB897-3C7C-4404-81D3-BC750D00A4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92FB897-3C7C-4404-81D3-BC750D00A4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92FB897-3C7C-4404-81D3-BC750D00A4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92FB897-3C7C-4404-81D3-BC750D00A4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3A6AE9-D228-444F-9045-436CEDAE7A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3A6AE9-D228-444F-9045-436CEDAE7A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3A6AE9-D228-444F-9045-436CEDAE7A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3A6AE9-D228-444F-9045-436CEDAE7A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE177D9-7F2E-47D3-B104-73177EE5CBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE177D9-7F2E-47D3-B104-73177EE5CBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE177D9-7F2E-47D3-B104-73177EE5CBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE177D9-7F2E-47D3-B104-73177EE5CBDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +68,9 @@ Global
 		{0C2C94A1-816D-4E0E-BB03-69DFDBFD0F52} = {2494F111-680D-47E3-809F-33EB05F35082}
 		{EA19C783-7B32-4141-8AA5-B079DCAF979B} = {92E90966-283F-467A-A2B4-7C9CFA911BFB}
 		{5B6D7643-62C5-4D48-B133-96C152276387} = {92E90966-283F-467A-A2B4-7C9CFA911BFB}
+		{C92FB897-3C7C-4404-81D3-BC750D00A4C8} = {3E374B7E-3D07-46E1-AB75-27D415654FEA}
+		{9B3A6AE9-D228-444F-9045-436CEDAE7A54} = {3E374B7E-3D07-46E1-AB75-27D415654FEA}
+		{0CE177D9-7F2E-47D3-B104-73177EE5CBDA} = {9706B1EE-35B0-45CB-9759-8418AD07D6B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29ABD2E0-93BD-4CF7-BAB3-15979BFFE9D2}
