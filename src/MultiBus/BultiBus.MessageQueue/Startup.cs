@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics.CodeAnalysis;
-using GreenPipes;
-using MassTransit;
-using BultiBus.MessageQueue.Consumers;
+﻿using System.Diagnostics.CodeAnalysis;
 using BultiBus.MessageQueue.Bus;
+using BultiBus.MessageQueue.Consumers;
+using MassTransit;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BultiBus.MessageQueue;
 
@@ -22,8 +21,8 @@ public static class Startup
             // Add a single consumer
             a.AddConsumer<FirstConsumer>(
                 m => m.UseMessageRetry(r =>
-                r.Interval(3, TimeSpan.FromMilliseconds(3000))
-            ));
+                    r.Interval(3, TimeSpan.FromMilliseconds(3000))
+                ));
 
             #endregion Consumers
 
@@ -39,7 +38,7 @@ public static class Startup
                 cfg.ConfigureEndpoints(context);
             });
         });
-        
+
         services.AddMassTransit<ISecondBus>(a =>
         {
             a.SetKebabCaseEndpointNameFormatter();
@@ -49,8 +48,8 @@ public static class Startup
             // Add a single consumer
             a.AddConsumer<SecondConsumer>(
                 m => m.UseMessageRetry(r =>
-                r.Interval(3, TimeSpan.FromMilliseconds(3000))
-            ));
+                    r.Interval(3, TimeSpan.FromMilliseconds(3000))
+                ));
 
             #endregion Consumers
 
@@ -64,7 +63,6 @@ public static class Startup
                 });
 
                 cfg.ConfigureEndpoints(context);
-
             });
         });
     }
