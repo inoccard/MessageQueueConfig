@@ -8,7 +8,7 @@ public class TestConsumer(ILogger<TestConsumer> logger) : IConsumer<ITested>
 {
     public async Task Consume(ConsumeContext<ITested> context)
     {
-        string message = $"Mensagem recebida {context.Message.Name}";
+        var message = $"Mensagem recebida {context.Message.Name}";
         logger.LogInformation(message);
         await Task.FromResult(context.Message);
     }

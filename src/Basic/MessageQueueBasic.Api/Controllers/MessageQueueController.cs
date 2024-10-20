@@ -10,9 +10,8 @@ public class MessageQueueController(
     ILogger<MessageQueueController> logger,
     IPublishEndpoint publishEndpoint) : ControllerBase
 {
-
     /// <summary>
-    /// Publica uma mensagem na fila
+    ///     Publica uma mensagem na fila
     /// </summary>
     /// <returns></returns>
     [HttpPost("send-message")]

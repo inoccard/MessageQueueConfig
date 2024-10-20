@@ -20,7 +20,7 @@ namespace MultiBus.Api.Controllers
                 new
                 {
                     Id = 1,
-                    Message = "esta é a primeira mensagem"
+                    Message = "esta Ã© a primeira mensagem"
                 });
 
             logger.LogInformation($"{nameof(PublishFirst)} mensagem enviada");
@@ -35,7 +35,7 @@ namespace MultiBus.Api.Controllers
                 new
                 {
                     Id = 1,
-                    Message = "esta é a segunda mensagem"
+                    Message = "esta Ã© a segunda mensagem"
                 });
 
             logger.LogInformation($"{nameof(PublishSecond)} mensagem enviada");

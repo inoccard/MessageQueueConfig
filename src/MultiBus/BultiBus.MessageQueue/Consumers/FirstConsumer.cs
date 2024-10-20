@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace BultiBus.MessageQueue.Consumers;
 
-public class FirstConsumer(ILogger<FirstConsumer> logger) : IConsumer<IFirstMessage>
+internal class FirstConsumer(ILogger<FirstConsumer> logger) : IConsumer<IFirstMessage>
 {
     public async Task Consume(ConsumeContext<IFirstMessage> context)
     {
